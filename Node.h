@@ -1,7 +1,13 @@
-#pragma once
-#include <vector>
+/*
+    @file Node.h
+    @brief Implement of graph node
+    @author Alexandr Ivanov (alexandr.ivanov.1995@gmail.com)
+*/
 
-using namespace std;
+#ifndef NODE_H
+#define NODE_H
+
+#include <vector>
 
 class Node
 {
@@ -10,9 +16,10 @@ public:
 	Node(int color);
 	~Node();
 
-	vector<int> connectedWith;
+	std::vector<int> connectedWith;
 	int colorNumber;
 	int conflictsNumber;
 
 };
 
+#endif //NODE_H

@@ -1,6 +1,14 @@
-#include"Graph.h"
-#include <Windows.h>
+/*
+    @file Main.cpp
+    @brief Graph coloring test
+    @author Alexandr Ivanov (alexandr.ivanov.1995@gmail.com)
+*/
+
 #include <sstream>
+#include <Windows.h>
+#include"Graph.h"
+
+using namespace std;
 
 string selectFile() {
 	WIN32_FIND_DATAW wfd;
@@ -77,7 +85,9 @@ void menu(Graph graph) {
 		cout << "File name : " << graph.getFileName() << endl;
 		cout << "Chromatic number : " << graph.getChromaticNumber() << endl;
 		cout << "Ants number : " << graph.getAntsNumber() << endl;
+
 		int option;
+		
 		cout << "\tMenu" << endl;
 		cout << "1) Open file" << endl;
 		cout << "2) Number of ants" << endl;
@@ -113,12 +123,9 @@ void menu(Graph graph) {
 
 int main()
 {
-	
 	Graph graph = Graph();
-	
 	//graph.coloring();
 
-	
 	menu(graph);
 
 	system("pause");
